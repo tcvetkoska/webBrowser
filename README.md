@@ -24,17 +24,17 @@
 ######Слика 3: Зачувување на омилени страници
 
 <p> Класата History  е едноставна класа која што се состои од следните три променливи:</p>
-'''
+<pre>
 public class History
     {
         public String Title { get; set; }
         public String Url { get; set; }
         public String Time { get; set; }
         
-'''
+</pre>
 <p>Во нејзиниот состав влегува конструктор, кој прима два аргументи (наслов и Url адреса):</p>
-...
 
+<pre>
 public History(String Title, String Url)
         {
             this.Title = Title;
@@ -42,22 +42,21 @@ public History(String Title, String Url)
             this.Time = String.Format("{0}:{1}",System.DateTime.Now.Hour.ToString(), System.DateTime.Now.Minute.ToString());
         }
 
-...
+</pre>
 
 
 <p>Исто така преоптоварен е и методот string To String() со чија помош се прикажуваат информации во формата за приказ  на историјата (слика 4).</p>
  ![screenshot_6](https://cloud.githubusercontent.com/assets/19307192/15209221/2f795982-1830-11e6-8e95-56fc2e0d51fd.png)
 ######Слика 4: Форма за приказ на историјата на пребарување 
-...
 
+<pre>
 public override string ToString()
         {
             return String.Format("Title: {0}, URL: {1}, Time: {2}", Title, Url, Time);
         }
- ...
+ </pre>
 <p>Во продолжение следи класата Bookmark.cs  која што се состои од истите два методи.<p>
-...
-
+<pre>
     public class Bookmark
     {
         public String Url { get; set; }
@@ -72,6 +71,6 @@ public override string ToString()
             return String.Format("Title: {0}, URL: {1}",Title,Url);
         }
     }
- ...
+ </pre>
 <p>Во  Form1.cs се наоѓаат сите функционалности на прелистувачот, т.е. тука се имплементирани кодовите за повеќето од копчињата кои во горниот делот за апликацијата се наведени.   </p>
 
